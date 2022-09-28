@@ -64,7 +64,7 @@
         android:fontFamily="@font/aref_ruqaa"
         android:text="@string/validate"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
