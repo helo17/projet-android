@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quizz\'Ditch</string>
+    <string name="rep1_q1">Potion de pouvoir</string>
+    <string name="rep2_q1">Potion d\'amour</string>
+    <string name="rep3_q1">Potion de Gloire</string>
+    <string name="rep4_q1">Potion de sagesse</string>
+    <string name="rep1_q2">L\'odeur de Gringotts</string>
+    <string name="rep2_q2">L\'odeur de ta maison</string>
+    <string name="rep3_q2">L\'odeur de la bière au beurre</string>
+    <string name="rep4_q2">L\'odeur d\'une bibliothèque</string>
+    <string name="btn_back">Retour</string>
+    <string name="btn_next">Suivant</string>
+    <string name="question1">1. Choisis la potion que tu aimerais le plus inventer : </string>
+    <string name="question2">2. La plante à Pipaillon produit tous les 100 ans des fleurs qui changent d\'odeur dans le but d\'attirer une personne précise. Quel parfum cette plante devrait-elle dégager pour t\'attirer ?</string>
+    <string name="text_intro">A quelle maison appartiens-tu ?</string>
+    <string name="btn_accueil">Demarrer</string>
+    <string name="enter_your_pseudo">Saisissez votre pseudo :</string>
+    <string name="validate">Valider</string>
+    <string name="back">Retour</string>
+    <string name="next">Suivant</string>
+    <string name="q3">3. 4 boîtes sont disposées devant toi. Tu as le droit d\'en ouvrir seulement une. Laquelle tu choisis ?</string>
+</resources>

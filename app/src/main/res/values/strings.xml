@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Quizz\'Ditch</string>
+    <string name="Nom_App" translatable="false">Quizz\'Ditch</string>
+    <string name="img_logo" translatable="false">TODO</string>
+    <string name="question1">1. Choose the potion you would most likely invent:</string>
+    <string name="rep1_q1">Power Potion</string>
+    <string name="question2">2. The Pipaillon plant produces flowers every 100 years that change their smell to attract a specific person. What scent should this plant emit to attract you?</string>
+    <string name="rep2_q1">Love Potion</string>
+    <string name="rep3_q1">Glory Potion</string>
+    <string name="rep4_q1">Wisdom Potion</string>
+    <string name="rep1_q2">The scent of Gringotts</string>
+    <string name="rep2_q2">The scent of your home</string>
+    <string name="rep3_q2">The scent of butterbeer</string>
+    <string name="rep4_q2">The scent of a library</string>
+    <string name="App_name" translatable="false">Quizz\'Ditch</string>
+    <string name="user" translatable="false"><![CDATA[<User>]]></string>
+    <string name="btn_back">Back</string>
+    <string name="btn_next">Next</string>
+    <string name="text_intro">Which house do you belong to?</string>
+    <string name="btn_accueil">Start</string>
+    <string name="pseudo" translatable="false">Pseudo</string>
+    <string name="enter_your_pseudo">Enter your pseudo:</string>
+    <string name="validate">Validate</string>
+    <string name="q3">3. 4 boxes are in front of you. You can open one of them. Which one do you choose?</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+</resources>
