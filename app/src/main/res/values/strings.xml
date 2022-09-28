@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Quizz\'Ditch</string>
+    <string name="app_name" translatable="false">Quizz\'Ditch</string>
     <string name="Nom_App" translatable="false">Quizz\'Ditch</string>
     <string name="img_logo" translatable="false">TODO</string>
     <string name="question1">1. Choose the potion you would most likely invent:</string>
