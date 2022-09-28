@@ -43,6 +43,8 @@
         android:layout_width="257dp"
         android:layout_height="48dp"
         android:layout_marginBottom="60dp"
+        android:autofillHints=""
+        android:backgroundTint="#FEFEFE"
         android:ems="10"
         android:fontFamily="@font/aref_ruqaa"
         android:inputType="textPersonName"
@@ -52,8 +54,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_val_pseudo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_val_pseudo"
