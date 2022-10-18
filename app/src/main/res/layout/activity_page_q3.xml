@@ -51,6 +51,8 @@
             android:layout_width="256dp"
             android:layout_height="51dp"
             android:text="@string/q_a_r_1"
+            app:checkedIconTint="#00BCD4"
+            app:chipIconTint="#00BCD4"
             app:closeIconVisible="true" />
 
         <com.google.android.material.chip.Chip
@@ -58,6 +60,8 @@
             android:layout_width="259dp"
             android:layout_height="48dp"
             android:text="@string/q_4_r_2"
+            app:checkedIconTint="#00BCD4"
+            app:chipIconTint="#00BCD4"
             app:closeIconVisible="true" />
 
         <com.google.android.material.chip.Chip
@@ -65,6 +69,8 @@
             android:layout_width="259dp"
             android:layout_height="48dp"
             android:text="@string/q_4_r_3"
+            app:checkedIconTint="#00BCD4"
+            app:chipIconTint="#00BCD4"
             app:closeIconVisible="true" />
 
         <com.google.android.material.chip.Chip
@@ -72,6 +78,8 @@
             android:layout_width="259dp"
             android:layout_height="48dp"
             android:text="@string/q_4_r_4"
+            app:checkedIconTint="#00BCD4"
+            app:chipIconTint="#00BCD4"
             app:closeIconVisible="true" />
 
     </com.google.android.material.chip.ChipGroup>
