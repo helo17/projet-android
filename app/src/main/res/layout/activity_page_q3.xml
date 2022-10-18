@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020202"
+    android:foregroundTint="#FEFEFE"
+    tools:context=".page_q3">
+
+    <TextView
+        android:id="@+id/text_quizzditch_p3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/App_name"
+        android:textColor="#FEFEFE"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_q4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666"
+        tools:layout_editor_absoluteX="310dp" />
+
+    <TextView
+        android:id="@+id/text_q4"
+        android:layout_width="305dp"
+        android:layout_height="97dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/Q_4"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/chipGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="268dp"
+        android:layout_height="199dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_r_1_q_4"
+            android:layout_width="256dp"
+            android:layout_height="51dp"
+            android:text="@string/q_a_r_1"
+            app:closeIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_r_2_q_4"
+            android:layout_width="259dp"
+            android:layout_height="48dp"
+            android:text="@string/q_4_r_2"
+            app:closeIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_r_3_q_4"
+            android:layout_width="259dp"
+            android:layout_height="48dp"
+            android:text="@string/q_4_r_3"
+            app:closeIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_r_4_q_4"
+            android:layout_width="259dp"
+            android:layout_height="48dp"
+            android:text="@string/q_4_r_4"
+            app:closeIconVisible="true" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#FEFEFE"
+        app:layout_constraintBottom_toTopOf="@+id/text_q5"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/text_q5"
+        android:layout_width="357dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/q_5"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="339dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FEFEFE"
+        android:entries="@array/question5"
+        android:foregroundTint="#FEFEFE"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back_p3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_back_p3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/btn_back"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_next_p3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/btn_next"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_back_p3"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

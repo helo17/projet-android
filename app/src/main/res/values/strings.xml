@@ -2,9 +2,9 @@
     <string name="app_name" translatable="false">Quizz\'Ditch</string>
     <string name="Nom_App" translatable="false">Quizz\'Ditch</string>
     <string name="img_logo" translatable="false">TODO</string>
-    <string name="question1">1. Choose the potion you would most likely invent:</string>
+    <string name="question1">2. Choose the potion you would most likely invent:</string>
     <string name="rep1_q1">Power Potion</string>
-    <string name="question2">2. The Pipaillon plant produces flowers every 100 years that change their smell to attract a specific person. What scent should this plant emit to attract you?</string>
+    <string name="question2">1. The Pipaillon plant produces flowers every 100 years that change their smell to attract a specific person. What scent should this plant emit to attract you?</string>
     <string name="rep2_q1">Love Potion</string>
     <string name="rep3_q1">Glory Potion</string>
     <string name="rep4_q1">Wisdom Potion</string>
@@ -24,4 +24,17 @@
     <string name="q3">3. 4 boxes are in front of you. You can open one of them. Which one do you choose?</string>
     <string name="back">Back</string>
     <string name="next">Next</string>
+    <string name="Text_congra">Congratulation</string>
+    <string name="text_fin">You belong to :</string>
+    <string name="rep_fin" translatable="false">rep</string>
+    <string name="img4">TODO</string>
+    <string name="img2">TODO</string>
+    <string name="img3">TODO</string>
+    <string name="img1">TODO</string>
+    <string name="Q_4">4. You are in an enchanted garden. What attracts your attention?</string>
+    <string name="q_a_r_1">The statue of a famous wizard</string>
+    <string name="q_4_r_2">A magical beast passing through</string>
+    <string name="q_4_r_3">A broom of quidditch</string>
+    <string name="q_4_r_4">A rare plant</string>
+    <string name="q_5">5. Hogwarts is burning, and there are four important things you need to save, but they’re in different places. Which one are you gonna save first?</string>
 </resources>

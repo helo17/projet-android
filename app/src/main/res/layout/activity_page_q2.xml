@@ -16,22 +16,9 @@
         android:text="@string/Nom_App"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_q2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.907"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/text_user_q2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:fontFamily="@font/aref_ruqaa"
-        android:text="@string/user"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/text_quizzditch_q2"
-        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,43 +27,83 @@
         android:layout_width="350dp"
         android:layout_height="91dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="@font/aref_ruqaa"
         android:text="@string/q3"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_user_q2" />
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <LinearLayout
-        android:layout_width="267dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="68dp"
-        android:orientation="horizontal"
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/btn_back"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/back" />
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="201dp"
+        android:layout_height="166dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/img1"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/boite1"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="230dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintStart_toEndOf="@+id/imageButton1"
+        app:layout_constraintTop_toBottomOf="@+id/text_q2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/boite2"
+        android:contentDescription="@string/img2" />
 
-        <Button
-            android:id="@+id/btn_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/next" />
-    </LinearLayout>
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="191dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/boite3"
+        android:contentDescription="@string/img3" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="193dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:srcCompat="@drawable/boite4"
+        android:contentDescription="@string/img4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

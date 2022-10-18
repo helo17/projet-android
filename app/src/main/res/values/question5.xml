@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="question5">
+        <item>Merlin\'s spell book</item>
+        <item>A remedy for the Dragoncelle</item>
+        <item>A friend in distress</item>
+        <item>School notebooks of all students</item>
+    </string-array>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020202"
+    tools:context=".page_q4">
+
+    <TextView
+        android:id="@+id/text_quizzditch_p4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/App_name"
+        android:textColor="#FEFEFE"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_q6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        tools:layout_editor_absoluteX="310dp" />
+
+    <TextView
+        android:id="@+id/text_q6"
+        android:layout_width="347dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="6. What would you be most interested lo tearn in Hogwarts?"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="254dp"
+        android:layout_height="170dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Switch
+            android:id="@+id/switch_r_1_q_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aref_ruqaa"
+            android:text=" Spells and curses  "
+            android:textColor="#FEFEFE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:thumbTint="#FEFEFE"
+            android:trackTint="#FEFEFE" />
+
+        <Space
+            android:layout_width="52dp"
+            android:layout_height="20dp" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aref_ruqaa"
+            android:text="Taming magical creatures  "
+            android:textColor="#FEFEFE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:trackTint="#FEFEFE" />
+
+        <Space
+            android:layout_width="52dp"
+            android:layout_height="20dp" />
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aref_ruqaa"
+            android:text="The castle secrets  "
+            android:textColor="#FEFEFE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:trackTint="#FEFEFE" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Switch
+            android:id="@+id/switch4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aref_ruqaa"
+            android:text="All areas of magic  "
+            android:textColor="#FEFEFE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:trackTint="#FEFEFE" />
+    </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00170F0F"
+        android:backgroundTint="#FEFEFE"
+        android:foregroundTint="#FEFEFE"
+        android:indeterminateTint="#FEFEFE"
+        android:progressBackgroundTint="#FEFEFE"
+        android:progressTint="#7A0479"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="511dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="336dp"
+        android:layout_height="104dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="7. On a scale of 1 to 5 how important you think it is to be part of the quidditch team ?"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#FEFEFE"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        tools:layout_editor_absoluteX="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
