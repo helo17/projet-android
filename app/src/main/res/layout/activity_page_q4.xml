@@ -64,7 +64,7 @@
             android:layout_height="20dp" />
 
         <Switch
-            android:id="@+id/switch2"
+            android:id="@+id/switch_r_2_q_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/aref_ruqaa"
@@ -79,7 +79,7 @@
             android:layout_height="20dp" />
 
         <Switch
-            android:id="@+id/switch3"
+            android:id="@+id/switch_r_3_q_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/aref_ruqaa"
@@ -94,7 +94,7 @@
             android:layout_height="20dp" />
 
         <Switch
-            android:id="@+id/switch4"
+            android:id="@+id/switch_r_4_q_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/aref_ruqaa"
@@ -109,15 +109,17 @@
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:background="#00170F0F"
-        android:backgroundTint="#FEFEFE"
-        android:foregroundTint="#FEFEFE"
-        android:indeterminateTint="#FEFEFE"
+        android:max="4"
+        android:numStars="4"
+        android:progress="0"
         android:progressBackgroundTint="#FEFEFE"
         android:progressTint="#7A0479"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back_p4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="511dp" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -125,7 +127,7 @@
         android:layout_height="104dp"
         android:layout_marginBottom="12dp"
         android:fontFamily="@font/aref_ruqaa"
-        android:text="7. On a scale of 1 to 5 how important you think it is to be part of the quidditch team ?"
+        android:text="7. On a scale of 1 to 4 how important you think it is to be part of the quidditch team ?"
         android:textAlignment="center"
         android:textColor="#FEFEFE"
         android:textSize="20sp"
@@ -143,5 +145,33 @@
         android:backgroundTint="#FEFEFE"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         tools:layout_editor_absoluteX="1dp" />
+
+    <Button
+        android:id="@+id/btn_back_p4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="52dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/btn_back"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_next_p4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="52dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/btn_next"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_back_p4"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
