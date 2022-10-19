@@ -28,8 +28,6 @@ public class page_q4 extends AppCompatActivity {
     public int C;
     public int D;
     private String pseudo;
-    private boolean ok=false;
-    private boolean clique=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +72,7 @@ public class page_q4 extends AppCompatActivity {
                     Toast.makeText(page_q4.this, "Donnez une réponse à Q6",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Intent intent = new Intent(v.getContext(), P_fin.class);
+                    Intent intent = new Intent(v.getContext(), page_q5.class);
                     score();
                     intent.putExtra("A",A);
                     intent.putExtra("B",B);

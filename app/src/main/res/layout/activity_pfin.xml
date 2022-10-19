@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#020202"
+    android:background="#333333"
     tools:context=".P_fin">
 
     <TextView
@@ -58,13 +58,26 @@
         android:id="@+id/text_rep"
         android:layout_width="126dp"
         android:layout_height="47dp"
-        android:layout_marginBottom="340dp"
+        android:layout_marginBottom="100dp"
         android:fontFamily="@font/aref_ruqaa"
         android:textColor="#FEFEFE"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/img_rep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_rep"
+        android:layout_width="203dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/img_rep"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

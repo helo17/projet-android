@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#020202"
+    android:background="#333333"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/img_logo"
         android:layout_width="285dp"
         android:layout_height="391dp"
+        android:contentDescription="@string/img_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_nomApp"
-        app:srcCompat="@drawable/img_logo"
-        android:contentDescription="@string/img_logo" />
+        app:srcCompat="@drawable/img_logo" />
 
     <TextView
         android:id="@+id/text_nomApp"

@@ -44,4 +44,10 @@
     <string name="Q6_r2">Taming magical creatures</string>
     <string name="Q6_r3">The castle secrets</string>
     <string name="Q6_r4">All areas of magic</string>
+    <string name="Q8">8. A Muggle confronts you and tells you that he knows you are a wizard. How do you react?</string>
+    <string name="Q8_r1">Yes, and then you want me to turn you into a pig?</string>
+    <string name="q8_r2">Why would you think such a thing?</string>
+    <string name="q8_r3">Yes, I am a wizard *you walk away bluffing*.</string>
+    <string name="q8_r4">Are you crazy?!</string>
+    <string name="img_rep">TODO</string>
 </resources>

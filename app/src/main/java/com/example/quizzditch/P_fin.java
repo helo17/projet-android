@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -20,6 +21,8 @@ public class P_fin extends AppCompatActivity {
     public int C;
     public int D;
 
+    private ImageView img_rep;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,7 @@ public class P_fin extends AppCompatActivity {
 
         text_rep = findViewById(R.id.text_rep);
         aff_pseudo = findViewById(R.id.aff_pseudo);
+        img_rep = findViewById(R.id.img_rep);
 
 
         //extras.getString("D")
