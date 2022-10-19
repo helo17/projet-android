@@ -29,7 +29,6 @@ public class page_q3 extends AppCompatActivity {
     public int C;
     public int D;
     private String pseudo;
-    private boolean ok=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +36,9 @@ public class page_q3 extends AppCompatActivity {
         setContentView(R.layout.activity_page_q3);
 
         chip_r_1_q_4 = findViewById(R.id.chip_r_1_q_4);
-        chip_r_2_q_4 = findViewById(R.id.chip_r_1_q_4);
-        chip_r_3_q_4 = findViewById(R.id.chip_r_1_q_4);
-        chip_r_4_q_4 = findViewById(R.id.chip_r_1_q_4);
+        chip_r_2_q_4 = findViewById(R.id.chip_r_2_q_4);
+        chip_r_3_q_4 = findViewById(R.id.chip_r_3_q_4);
+        chip_r_4_q_4 = findViewById(R.id.chip_r_4_q_4);
 
         btn_back_p3 = findViewById(R.id.btn_back_p3);
         btn_next_p3 = findViewById(R.id.btn_next_p3);
@@ -66,7 +65,7 @@ public class page_q3 extends AppCompatActivity {
         btn_next_p3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ok=true){
+                if (nbChipChecked() == 1){
                     Intent intent = new Intent(v.getContext(), page_q4.class);
                     score();
                     intent.putExtra("A",A);
@@ -74,12 +73,10 @@ public class page_q3 extends AppCompatActivity {
                     intent.putExtra("C",C);
                     intent.putExtra("D",D);
                     intent.putExtra("pseudo_uti",pseudo);
-                    Log.d(MainActivity.TAG, "onClick: res chip " +B);
-                    Log.d(MainActivity.TAG, "onClick: res " +C);
                     startActivity(intent);
                 }
                 else{
-                    Toast.makeText(page_q3.this, "répondez",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(page_q3.this, "Veuillez saisir une réponse à Q4",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -88,30 +85,20 @@ public class page_q3 extends AppCompatActivity {
     public void score() {
         if (chip_r_1_q_4.isChecked()){
             D++;
-            ok=true;
-            Log.d(MainActivity.TAG, "onClick: est coché 1");
         }
         else if (chip_r_2_q_4.isChecked()){
             B++;
-            ok=true;
-            Log.d(MainActivity.TAG, "onClick: est coché 2");
         }
         else if (chip_r_3_q_4.isChecked()){
             C++;
-            ok=true;
-            Log.d(MainActivity.TAG, "onClick: est coché 3");
         }
         else if(chip_r_4_q_4.isChecked()){
             A++;
-            ok=true;
-            Log.d(MainActivity.TAG, "onClick: est coché 4");
-        }
-        else{
-            ok=false;
         }
 
         if (spinner.getSelectedItemPosition() == 0){
             A++;
+            Log.d(MainActivity.TAG, "onClick: spinner 1" +A);
         }
         else if (spinner.getSelectedItemPosition() == 1){
             B++;
@@ -122,5 +109,23 @@ public class page_q3 extends AppCompatActivity {
         else{
             D++;
         }
+    }
+
+    public int nbChipChecked(){
+        int cpt = 0;
+        if (chip_r_1_q_4.isChecked()) {
+            cpt++;
+        }
+        if (chip_r_2_q_4.isChecked()){
+            cpt++;
+        }
+        if (chip_r_3_q_4.isChecked()) {
+            cpt++;
+        }
+        if (chip_r_4_q_4.isChecked()){
+            cpt++;
+        }
+        Log.d(MainActivity.TAG, "nbChipChecked: " + cpt);
+        return cpt;
     }
 }

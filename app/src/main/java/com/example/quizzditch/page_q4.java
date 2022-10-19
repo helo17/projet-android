@@ -67,7 +67,13 @@ public class page_q4 extends AppCompatActivity {
         btn_next_p4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ok=true){
+                if (ratingBar.getRating() == 0){
+                    Toast.makeText(page_q4.this, "Répondez à Q7",Toast.LENGTH_SHORT).show();
+                }
+                else if (nbSwitchChecked() != 1){
+                    Toast.makeText(page_q4.this, "Donnez une réponse à Q6",Toast.LENGTH_SHORT).show();
+                }
+                else{
                     Intent intent = new Intent(v.getContext(), P_fin.class);
                     score();
                     intent.putExtra("A",A);
@@ -77,9 +83,6 @@ public class page_q4 extends AppCompatActivity {
                     intent.putExtra("pseudo_uti",pseudo);
                     startActivity(intent);
                 }
-                else{
-                    Toast.makeText(page_q4.this, "répondez",Toast.LENGTH_SHORT).show();
-                }
             }
         });
     }
@@ -87,18 +90,42 @@ public class page_q4 extends AppCompatActivity {
     public void score() {
         if (switch_r_1_q_6.isChecked()) {
             D++;
-            ok = true;
         } else if (switch_r_2_q_6.isChecked()) {
             B++;
-            ok = true;
         } else if (switch_r_3_q_6.isChecked()) {
             C++;
-            ok = true;
         } else if (switch_r_4_q_6.isChecked()) {
             A++;
-            ok = true;
-        } else {
-            ok = false;
         }
+
+        if (ratingBar.getRating() == 1.0){
+            A++;
+        }
+        else if (ratingBar.getRating() == 2.0){
+            B++;
+        }else if (ratingBar.getRating() == 3.0){
+            C++;
+        }else if (ratingBar.getRating() == 4.0){
+            D++;
+        }
+    }
+
+
+    public int nbSwitchChecked(){
+        int cpt = 0;
+        if (switch_r_1_q_6.isChecked()) {
+            cpt++;
+        }
+        if (switch_r_2_q_6.isChecked()){
+            cpt++;
+        }
+        if (switch_r_3_q_6.isChecked()) {
+            cpt++;
+        }
+        if (switch_r_4_q_6.isChecked()){
+            cpt++;
+        }
+        Log.d(MainActivity.TAG, "nbChipChecked: " + cpt);
+        return cpt;
     }
 }

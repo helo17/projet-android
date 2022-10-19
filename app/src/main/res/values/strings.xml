@@ -27,15 +27,21 @@
     <string name="Text_congra">Congratulation</string>
     <string name="text_fin">You belong to :</string>
     <string name="rep_fin" translatable="false">rep</string>
-    <string name="img4">TODO</string>
-    <string name="img2">TODO</string>
-    <string name="img3">TODO</string>
-    <string name="img1">TODO</string>
+    <string name="img4" translatable="false">TODO</string>
+    <string name="img2" translatable="false">TODO</string>
+    <string name="img3" translatable="false">TODO</string>
+    <string name="img1" translatable="false">TODO</string>
     <string name="Q_4">4. You are in an enchanted garden. What attracts your attention?</string>
     <string name="q_a_r_1">The statue of a famous wizard</string>
     <string name="q_4_r_2">A magical beast passing through</string>
     <string name="q_4_r_3">A broom of quidditch</string>
     <string name="q_4_r_4">A rare plant</string>
     <string name="q_5">5. Hogwarts is burning, and there are four important things you need to save, but they’re in different places. Which one are you gonna save first?</string>
-    <string name="text_spi">Select your answer</string>
+    <string name="text_spi" translatable="false">Select your answer</string>
+    <string name="Q7">7. On a scale of 1 to 4 how important you think it is to be part of the quidditch team ?</string>
+    <string name="Q6_R1">Spells and curses</string>
+    <string name="Q6">6. What would you be most interested lo tearn in Hogwarts?</string>
+    <string name="Q6_r2">Taming magical creatures</string>
+    <string name="Q6_r3">The castle secrets</string>
+    <string name="Q6_r4">All areas of magic</string>
 </resources>

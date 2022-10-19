@@ -22,4 +22,10 @@
     <string name="q3">3. 4 boîtes sont disposées devant toi. Tu as le droit d\'en ouvrir seulement une. Laquelle tu choisis ?</string>
     <string name="Text_congra">Félicitation</string>
     <string name="text_fin">Vous appartenez à la maison :</string>
+    <string name="Q_4">"4. Tu te trouves dans un jardin enchanté. Qu'est-ce qui attire ton attention ? "</string>
+    <string name="q_a_r_1">La statue d’un sorcier de grande renommée</string>
+    <string name="q_4_r_2">Un animal magique qui passe par là</string>
+    <string name="q_4_r_3">Un balai de quidditch</string>
+    <string name="q_4_r_4">Une plante rare</string>
+    <string name="q_5">"5. Poudlard est en train de brûler, et il y a 4 choses importantes que vous devez sauver. Lequel vas-tu sauver en premier ? "</string>
 </resources>
