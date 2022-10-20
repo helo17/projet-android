@@ -28,4 +28,15 @@
     <string name="q_4_r_3">Un balai de quidditch</string>
     <string name="q_4_r_4">Une plante rare</string>
     <string name="q_5">"5. Poudlard est en train de brûler, et il y a 4 choses importantes que vous devez sauver. Lequel vas-tu sauver en premier ? "</string>
+    <string name="Q7">7. Sur une échelle de 1 à 4 a quel point jugez vous important de faire partie de l’équipe de quidditch ?</string>
+    <string name="Q6">"6. Qu'est-ce qui t'intéresserait le plus d'apprendre à Poudlard ? "</string>
+    <string name="Q6_R1">Les sortilèges et maléfices</string>
+    <string name="Q6_r2">Apprivoiser les créatures magiques</string>
+    <string name="Q6_r3">Les secrets du château</string>
+    <string name="Q6_r4">Tous les domaines de la magie</string>
+    <string name="Q8">8. Un Moldu te confronte en te disant qu\'il sait que tu es un sorcier. Comment réagis-tu ?</string>
+    <string name="Q8_r1">Oui et alors, tu veux que je te change en cochon ?</string>
+    <string name="q8_r2">Pourquoi penses-tu une telle chose ?</string>
+    <string name="q8_r3">Oui je suis un sorcier *tu t’en vas en tentant le bluff*</string>
+    <string name="q8_r4">Es-tu fou/folle ?!</string>
 </resources>

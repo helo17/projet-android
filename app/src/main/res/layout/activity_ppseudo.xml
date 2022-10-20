@@ -55,13 +55,15 @@
         android:ems="10"
         android:fontFamily="@font/aref_ruqaa"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="@string/pseudo"
         android:textAlignment="viewStart"
         android:textColor="#FEFEFE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_saisie_p" />
+        app:layout_constraintTop_toBottomOf="@+id/text_saisie_p"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btn_back_pp"

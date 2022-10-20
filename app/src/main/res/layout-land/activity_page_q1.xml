@@ -11,23 +11,23 @@
         android:id="@+id/text_quizzditch_q1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/aref_ruqaa"
         android:text="@string/App_name"
         android:textColor="#FEFEFE"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/text_q1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintHorizontal_bias="0.969"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintVertical_bias="0.21" />
 
     <TextView
         android:id="@+id/text_q1"
-        android:layout_width="370dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="287dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="28dp"
         android:fontFamily="@font/aref_ruqaa"
         android:text="@string/question1"
         android:textAlignment="center"
@@ -35,18 +35,18 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.963"
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="365dp"
-        android:layout_height="141dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="293dp"
+        android:layout_height="152dp"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/btn_back_q1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintHorizontal_bias="0.963"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
@@ -56,21 +56,21 @@
 
             <Button
                 android:id="@+id/btn_q1_r1"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
+                android:layout_width="129dp"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/aref_ruqaa"
                 android:text="@string/rep1_q1"
                 android:textStyle="bold" />
 
             <Space
-                android:layout_width="0dp"
-                android:layout_height="32dp"
+                android:layout_width="5dp"
+                android:layout_height="30dp"
                 android:layout_weight="1" />
 
             <Button
                 android:id="@+id/btn_q1_r2"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
+                android:layout_width="141dp"
+                android:layout_height="65dp"
                 android:fontFamily="@font/aref_ruqaa"
                 android:text="@string/rep2_q1"
                 android:textStyle="bold" />
@@ -88,21 +88,21 @@
 
             <Button
                 android:id="@+id/btn_q1_r3"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/aref_ruqaa"
                 android:text="@string/rep3_q1"
                 android:textStyle="bold" />
 
             <Space
-                android:layout_width="0dp"
-                android:layout_height="32dp"
+                android:layout_width="5dp"
+                android:layout_height="30dp"
                 android:layout_weight="1" />
 
             <Button
                 android:id="@+id/btn_q1_r4"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
+                android:layout_width="143dp"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/aref_ruqaa"
                 android:text="@string/rep4_q1"
                 android:textStyle="bold" />
@@ -112,32 +112,31 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="394dp"
-        android:layout_height="150dp"
+        android:layout_width="372dp"
+        android:layout_height="171dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="4dp"
         android:fontFamily="@font/aref_ruqaa"
         android:text="@string/question2"
         android:textAlignment="center"
         android:textColor="#FEFEFE"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="228dp"
         android:layout_height="204dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <RadioButton
             android:id="@+id/radioButton_q2_r1"
@@ -178,6 +177,7 @@
         android:id="@+id/btn_back_q1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/aref_ruqaa"
         android:onClick="action_end"
         android:text="@string/btn_back"
@@ -185,18 +185,20 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.829"
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
-        android:id="@+id/divider"
-        android:layout_width="wrap_content"
-        android:layout_height="2dp"
-        android:layout_marginBottom="12dp"
+        android:id="@+id/divider5"
+        android:layout_width="1dp"
+        android:layout_height="409dp"
         android:background="?android:attr/listDivider"
         android:backgroundTint="#FEFEFE"
-        android:foregroundTint="#FDFDFD"
-        app:layout_constraintBottom_toTopOf="@+id/text_q1"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
