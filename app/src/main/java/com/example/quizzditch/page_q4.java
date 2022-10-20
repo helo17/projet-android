@@ -96,14 +96,14 @@ public class page_q4 extends AppCompatActivity {
             A++;
         }
 
-        if (ratingBar.getRating() == 1.0){
+        if (ratingBar.getRating() <= 1.0){
             A++;
         }
-        else if (ratingBar.getRating() == 2.0){
+        else if (ratingBar.getRating() <= 2.0){
             B++;
-        }else if (ratingBar.getRating() == 3.0){
+        }else if (ratingBar.getRating() <= 3.0){
             C++;
-        }else if (ratingBar.getRating() == 4.0){
+        }else if (ratingBar.getRating() <= 4.0){
             D++;
         }
     }
@@ -126,4 +126,5 @@ public class page_q4 extends AppCompatActivity {
         Log.d(MainActivity.TAG, "nbChipChecked: " + cpt);
         return cpt;
     }
+
 }

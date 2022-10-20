@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -16,6 +17,8 @@ public class page_q2 extends AppCompatActivity {
     private ImageButton imageButton2;
     private ImageButton imageButton3;
     private ImageButton imageButton4;
+
+    private Button btn_back;
 
     public int A;
     public int B;
@@ -31,6 +34,7 @@ public class page_q2 extends AppCompatActivity {
         imageButton2 = findViewById(R.id.imageButton2);
         imageButton3 = findViewById(R.id.imageButton3);
         imageButton4 = findViewById(R.id.imageButton4);
+        btn_back = findViewById(R.id.btn_back);
 
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
@@ -42,6 +46,13 @@ public class page_q2 extends AppCompatActivity {
             D = b.getInt("D");
             Log.d(MainActivity.TAG, "onCreate: test2  " + D);
         }
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         imageButton1.setOnClickListener(new View.OnClickListener() {
         @Override

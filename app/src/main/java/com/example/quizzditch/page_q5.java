@@ -59,7 +59,7 @@ public class page_q5 extends AppCompatActivity {
         btn_next_p5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (nbCChecked() == 1){
+                if (nbCChecked() != 0){
                     Intent intent = new Intent(v.getContext(), P_fin.class);
                     score();
                     intent.putExtra("A",A);
@@ -70,7 +70,7 @@ public class page_q5 extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else{
-                    Toast.makeText(page_q5.this, "Veuillez saisir une réponse à Q8",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(page_q5.this, "Veuillez saisir au moins une réponse à Q8",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -79,11 +79,11 @@ public class page_q5 extends AppCompatActivity {
     public void score() {
         if (checkBox_q_8_r_1.isChecked()) {
             A++;
-        } else if (checkBox_q_8_r_2.isChecked()) {
+        } if (checkBox_q_8_r_2.isChecked()) {
             B++;
-        } else if (checkBox_q_8_r_3.isChecked()) {
+        } if (checkBox_q_8_r_3.isChecked()) {
             C++;
-        } else if (checkBox_q_8_r_4.isChecked()) {
+        } if (checkBox_q_8_r_4.isChecked()) {
             D++;
         }
     }

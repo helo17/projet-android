@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +24,8 @@ public class P_fin extends AppCompatActivity {
     public int D;
 
     private ImageView img_rep;
+    private Button btn_back_fin;
+    private Button btn_share;
 
 
     @Override
@@ -32,9 +36,8 @@ public class P_fin extends AppCompatActivity {
         text_rep = findViewById(R.id.text_rep);
         aff_pseudo = findViewById(R.id.aff_pseudo);
         img_rep = findViewById(R.id.img_rep);
-
-
-        //extras.getString("D")
+        btn_back_fin = findViewById(R.id.btn_back_fin);
+        btn_share = findViewById(R.id.btn_share);
 
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
@@ -44,12 +47,18 @@ public class P_fin extends AppCompatActivity {
             B = Integer.parseInt(b.get("B").toString());
             C = Integer.parseInt(b.get("C").toString());
             D = Integer.parseInt(b.get("D").toString());
-            Log.d(MainActivity.TAG, "onCreate: " + (b.get("A").toString()));
 
 
             setTextRep();
 
             aff_pseudo.setText(pseudo);
+
+            btn_back_fin.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                }
+            });
 
         }
 
@@ -61,25 +70,33 @@ public class P_fin extends AppCompatActivity {
     public String calcul(){
         int tab[] = {A,B,C,D};
         OptionalInt val = Arrays.stream(tab).max();
-        Log.d(MainActivity.TAG, "calcul: " + tab[0]+tab[1]+tab[2]+tab[3]);
-        Log.d(MainActivity.TAG, "calcul: " + A);
 
-        Log.d(MainActivity.TAG, "calcul: " + val.getAsInt());
-
-            if (val.getAsInt() == A){
-                return "Serpentard";
-            }
-            else if (val.getAsInt() == B){
-                return "Poufsouffle";
-            }
-            else if (val.getAsInt() == C){
-                return "Gryffondor";
-            }
-            else{
-                return "Serdaigle";
-            }
+        if (val.getAsInt() == A){
+            img_rep.setImageResource(R.drawable.img_serpentard);
+            return "Serpentard";
+        }
+        else if (val.getAsInt() == B){
+            img_rep.setImageResource(R.drawable.img_pouf);
+            return "Poufsouffle";
+        }
+        else if (val.getAsInt() == C){
+            img_rep.setImageResource(R.drawable.img_gri);
+            return "Gryffondor";
+        }
+        else{
+            img_rep.setImageResource(R.drawable.img_ser);
+            return "Serdaigle";
+        }
     }
 
+    public void envoie (View v){
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
+
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, "Congrats, you are a member of "+ calcul() +" ! Share the app to know in which house your fiends are !");
+        startActivity(Intent.createChooser(intent, "share"));
+    }
 
 
 }
