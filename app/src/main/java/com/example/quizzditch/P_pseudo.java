@@ -46,31 +46,49 @@ public class P_pseudo extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart(); // ALWAYS call first the parent’s method!
-        Log.d(MainActivity.TAG, "OnStart");
+        Log.d(MainActivity.TAG, "OnStart page pseudo");
     }
 
     @Override
     protected void onPause() {
         super.onPause(); // ALWAYS call first the parent’s method!
-        Log.d(MainActivity.TAG, "onPause");
+        Log.d(MainActivity.TAG, "onPause page pseudo");
     }
 
     @Override
     protected void onStop() {
         super.onStop(); // ALWAYS call first the parent’s method!
-        Log.d(MainActivity.TAG, "onStop");
+        Log.d(MainActivity.TAG, "onStop page pseudo");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy(); // ALWAYS call first the parent’s method
-        Log.d(MainActivity.TAG, "onDestroy");
+        Log.d(MainActivity.TAG, "onDestroy page pseudo");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart(); // ALWAYS call first the parent’s method!
-        Log.d(MainActivity.TAG, "onRestart");
+        Log.d(MainActivity.TAG, "onRestart page pseudo");
     }
 
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) { //seul Bundle est important
+        super.onSaveInstanceState(outState, outPersistentState);
+        Log.i(MainActivity.TAG, "onSaveInstanceState: page pseudo");
+
+        outState.putString("pseudo_uti",saisie_p.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.i(MainActivity.TAG, "onRestoreInstanceState: page1 ");
+
+        if(savedInstanceState.containsKey("pseudo_uti")) {  //Toujours vérifier si existe !!
+            String pseudo = savedInstanceState.getString("pseudo_uti");
+            this.saisie_p.setText(pseudo);
+        }
+    }
 }

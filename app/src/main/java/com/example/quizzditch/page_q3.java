@@ -1,11 +1,13 @@
 package com.example.quizzditch;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Log;
@@ -148,5 +150,48 @@ public class page_q3 extends AppCompatActivity {
             }
         }
 // sinon il n’y a pas de mécanisme de vibration
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "OnStart page 3");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "onPause page 3");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "onStop page 3");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy(); // ALWAYS call first the parent’s method
+        Log.d(MainActivity.TAG, "onDestroy page 3");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "onRestartpage 3");
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) { //seul Bundle est important
+        super.onSaveInstanceState(outState, outPersistentState);
+        Log.i(MainActivity.TAG, "onSaveInstanceState: page 3 ");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        Log.i(MainActivity.TAG, "onRestoreInstanceState: page 3 ");
     }
 }

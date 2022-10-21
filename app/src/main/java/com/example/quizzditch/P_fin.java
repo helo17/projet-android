@@ -1,11 +1,13 @@
 package com.example.quizzditch;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Log;
@@ -67,7 +69,6 @@ public class P_fin extends AppCompatActivity {
             });
 
         }
-
     }
     public void setTextRep() {
         text_rep.setText(calcul());
@@ -119,6 +120,47 @@ public class P_fin extends AppCompatActivity {
             }
         }
 // sinon il n’y a pas de mécanisme de vibration
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "OnStart page fin");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "onPause page fin");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "onStop page fin");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy(); // ALWAYS call first the parent’s method
+        Log.d(MainActivity.TAG, "onDestroy page fin");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "onRestart page fin");
+    }
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) { //seul Bundle est important
+        super.onSaveInstanceState(outState, outPersistentState);
+        Log.i(MainActivity.TAG, "onSaveInstanceState: page fin ");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.i(MainActivity.TAG, "onRestoreInstanceState: page fin ");
     }
 
 

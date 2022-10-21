@@ -175,5 +175,40 @@ public class Page_Q1 extends AppCompatActivity {
         }
 // sinon il n’y a pas de mécanisme de vibration
     }
+    @Override
+    protected void onPause() {
+        super.onPause(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "onPause page1");
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "onStop page1");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy(); // ALWAYS call first the parent’s method
+        Log.d(MainActivity.TAG, "onDestroy page1");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "onRestart page1");
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) { //seul Bundle est important
+        super.onSaveInstanceState(outState, outPersistentState);
+        Log.i(MainActivity.TAG, "onSaveInstanceState: page1 ");
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.i(MainActivity.TAG, "onRestoreInstanceState: page1 ");
+    }
 }
