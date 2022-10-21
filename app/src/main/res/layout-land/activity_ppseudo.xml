@@ -11,26 +11,34 @@
         android:id="@+id/btn_validate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="152dp"
         android:text="@string/validate"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back_pp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/saisie_p" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/text_saisie_p"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/Text_Quizzditch_pseudo"
+    <EditText
+        android:id="@+id/saisie_p"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="56dp"
+        android:autofillHints=""
+        android:backgroundTint="#FEFEFE"
+        android:ems="10"
         android:fontFamily="@font/aref_ruqaa"
-        android:text="@string/Nom_App"
-        android:textAlignment="center"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/pseudo"
+        android:textAlignment="viewStart"
         android:textColor="#FEFEFE"
-        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text_saisie_p" />
 
     <TextView
         android:id="@+id/text_saisie_p"
@@ -43,38 +51,34 @@
         android:textColor="#FEFEFE"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Text_Quizzditch_pseudo" />
 
-    <EditText
-        android:id="@+id/saisie_p"
+    <TextView
+        android:id="@+id/Text_Quizzditch_pseudo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:backgroundTint="#FEFEFE"
-        android:ems="10"
+        android:layout_marginTop="52dp"
         android:fontFamily="@font/aref_ruqaa"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="@string/pseudo"
-        android:textAlignment="viewStart"
+        android:text="@string/Nom_App"
+        android:textAlignment="center"
         android:textColor="#FEFEFE"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_saisie_p"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_back_pp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_height="48dp"
         android:text="@string/btn_back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_validate"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_validate"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_validate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63" />
 </androidx.constraintlayout.widget.ConstraintLayout>

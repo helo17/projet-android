@@ -39,4 +39,6 @@
     <string name="q8_r2">Pourquoi penses-tu une telle chose ?</string>
     <string name="q8_r3">Oui je suis un sorcier *tu t’en vas en tentant le bluff*</string>
     <string name="q8_r4">Es-tu fou/folle ?!</string>
+    <string name="btn_restart">Recommencer</string>
+    <string name="share">Partager</string>
 </resources>

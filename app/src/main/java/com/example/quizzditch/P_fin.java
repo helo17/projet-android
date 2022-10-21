@@ -2,11 +2,17 @@ package com.example.quizzditch;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.PersistableBundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
@@ -16,8 +22,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.OptionalInt;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class P_fin extends AppCompatActivity {
 
@@ -32,7 +46,16 @@ public class P_fin extends AppCompatActivity {
     private ImageView img_rep;
     private Button btn_back_fin;
     private Button btn_share;
+    private Button btn_restart;
 
+    public Set<String> houseHistory;
+
+    // Listes des permissions
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +67,8 @@ public class P_fin extends AppCompatActivity {
         img_rep = findViewById(R.id.img_rep);
         btn_back_fin = findViewById(R.id.btn_back_fin);
         btn_share = findViewById(R.id.btn_share);
+        btn_restart = findViewById(R.id.btn_restart);
+
 
         vibrate(10);
 
@@ -68,6 +93,24 @@ public class P_fin extends AppCompatActivity {
                 }
             });
 
+            btn_restart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent intent = new Intent(view.getContext(), MainActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            Log.d(MainActivity.TAG, "A = "+A);
+            Log.d(MainActivity.TAG, "B = "+B);
+            Log.d(MainActivity.TAG, "C = "+C);
+            Log.d(MainActivity.TAG, "D = "+D);
+
+            reload_historic();
+            houseHistory.add(calcul());
+            display_historic();
+            write_historic_in_file();
         }
     }
     public void setTextRep() {
@@ -104,6 +147,57 @@ public class P_fin extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_TEXT, "Congrats, you are a member of "+ calcul() +" ! Share the app to know in which house your fiends are !");
         startActivity(Intent.createChooser(intent, "share"));
     }
+
+    public void reload_historic() {
+        SharedPreferences sharedPref =  getSharedPreferences("scoreHistory", Context.MODE_MULTI_PROCESS);
+        houseHistory = sharedPref.getStringSet("scoreHistory", new TreeSet<String>());
+    }
+
+    public void display_historic() {
+        Log.d(MainActivity.TAG, "Historique (" + (new Date()) + ") size= " + houseHistory.size() + ":  ");
+        for (String item : houseHistory) {
+            Log.d(MainActivity.TAG, "\t- " + item);
+        }
+    }
+
+    public static void verifyStoragePermissions(Activity activity) {
+        // Vérifie si nous avons les droits d'écriture
+        int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // Aïe, il faut les demander à l'utilisateur
+            ActivityCompat.requestPermissions(
+                    activity,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
+    }
+
+    public void write_historic_in_file() {
+        verifyStoragePermissions(P_fin.this);
+        File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        File fileout = new File(folder, "Historic_Quizz.txt");
+        try (FileOutputStream fos = new FileOutputStream(fileout)) {
+            PrintStream ps = new PrintStream(fos);
+            reload_historic();
+            ps.println("Start␣of␣my␣historic");
+// TODO: YOU MUST COMPLETE HERE
+            ps.println(pseudo +" : " + calcul());
+            ps.close();
+        } catch (FileNotFoundException e) {
+            Log.e(MainActivity.TAG,"File␣not␣found",e);
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.e(MainActivity.TAG,"Error␣I/O",e);
+        }
+    }
+
+
+
+
+
 
     public void vibrate(long duration_ms) {
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);

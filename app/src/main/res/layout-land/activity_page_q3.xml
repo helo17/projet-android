@@ -10,27 +10,11 @@
     tools:context=".page_q3">
 
     <TextView
-        android:id="@+id/text_quizzditch_p3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/aref_ruqaa"
-        android:text="@string/App_name"
-        android:textColor="#FEFEFE"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/text_q5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.969"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
         android:id="@+id/text_q4"
         android:layout_width="305dp"
         android:layout_height="97dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="96dp"
         android:fontFamily="@font/aref_ruqaa"
         android:text="@string/Q_4"
         android:textAlignment="center"
@@ -39,17 +23,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/chipGroup"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup"
         android:layout_width="268dp"
         android:layout_height="199dp"
-        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.chip.Chip
@@ -109,7 +91,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/text_q4"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -119,26 +101,26 @@
         android:layout_width="339dp"
         android:layout_height="48dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="12dp"
         android:backgroundTint="#FFFFFF"
         android:entries="@array/question5"
         android:foregroundTint="#FDFDFD"
         app:layout_constraintBottom_toTopOf="@+id/btn_back_p3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toEndOf="@+id/chipGroup" />
 
     <Button
         android:id="@+id/btn_back_p3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="28dp"
         android:fontFamily="@font/aref_ruqaa"
         android:text="@string/btn_back"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.634"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -152,9 +134,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toEndOf="@+id/btn_back_p3"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/divider4"

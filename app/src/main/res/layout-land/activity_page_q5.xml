@@ -8,27 +8,10 @@
     tools:context=".page_q5">
 
     <TextView
-        android:id="@+id/text_quizzditch_p"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="40dp"
-        android:fontFamily="@font/aref_ruqaa"
-        android:text="@string/App_name"
-        android:textColor="#FEFEFE"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_next_p5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/text_q8"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
         android:id="@+id/text_q8"
         android:layout_width="359dp"
         android:layout_height="106dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="@font/aref_ruqaa"
         android:text="@string/Q8"
         android:textAlignment="center"
@@ -37,14 +20,13 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="330dp"
-        android:layout_height="245dp"
+        android:layout_width="339dp"
+        android:layout_height="224dp"
         android:layout_marginBottom="4dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -97,16 +79,14 @@
     <Button
         android:id="@+id/btn_back_p5"
         android:layout_width="100dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="112dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="100dp"
         android:fontFamily="@font/aref_ruqaa"
         android:text="@string/btn_back"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.008"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout3" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_next_p5"
+        app:layout_constraintStart_toStartOf="@+id/btn_next_p5" />
 
     <Button
         android:id="@+id/btn_next_p5"
@@ -120,6 +100,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_back_p5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/text_q8" />
+        app:layout_constraintStart_toEndOf="@+id/text_q8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
