@@ -2,8 +2,12 @@ package com.example.quizzditch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +42,8 @@ public class P_fin extends AppCompatActivity {
         img_rep = findViewById(R.id.img_rep);
         btn_back_fin = findViewById(R.id.btn_back_fin);
         btn_share = findViewById(R.id.btn_share);
+
+        vibrate(10);
 
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
@@ -96,6 +102,23 @@ public class P_fin extends AppCompatActivity {
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, "Congrats, you are a member of "+ calcul() +" ! Share the app to know in which house your fiends are !");
         startActivity(Intent.createChooser(intent, "share"));
+    }
+
+    public void vibrate(long duration_ms) {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if(duration_ms < 1)
+            duration_ms = 1;
+        if(v != null && v.hasVibrator()) {
+// Attention changement comportement avec API >= 26 (cf doc)
+            if(Build.VERSION.SDK_INT >= 26) {
+                v.vibrate(VibrationEffect.createOneShot(duration_ms,
+                        VibrationEffect.DEFAULT_AMPLITUDE));
+            }
+            else {
+                v.vibrate(duration_ms);
+            }
+        }
+// sinon il n’y a pas de mécanisme de vibration
     }
 
 

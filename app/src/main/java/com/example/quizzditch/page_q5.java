@@ -2,8 +2,12 @@ package com.example.quizzditch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -67,6 +71,7 @@ public class page_q5 extends AppCompatActivity {
                     intent.putExtra("C",C);
                     intent.putExtra("D",D);
                     intent.putExtra("pseudo_uti",pseudo);
+                    vibrate(5);
                     startActivity(intent);
                 }
                 else{
@@ -103,6 +108,23 @@ public class page_q5 extends AppCompatActivity {
             cpt++;
         }
         return cpt;
+    }
+
+    public void vibrate(long duration_ms) {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if(duration_ms < 1)
+            duration_ms = 1;
+        if(v != null && v.hasVibrator()) {
+// Attention changement comportement avec API >= 26 (cf doc)
+            if(Build.VERSION.SDK_INT >= 26) {
+                v.vibrate(VibrationEffect.createOneShot(duration_ms,
+                        VibrationEffect.DEFAULT_AMPLITUDE));
+            }
+            else {
+                v.vibrate(duration_ms);
+            }
+        }
+// sinon il n’y a pas de mécanisme de vibration
     }
 
 }
