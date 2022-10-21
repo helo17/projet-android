@@ -72,6 +72,11 @@ public class P_pseudo extends AppCompatActivity {
         super.onRestart(); // ALWAYS call first the parent’s method!
         Log.d(MainActivity.TAG, "onRestart page pseudo");
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(MainActivity.TAG, "onResume page pseudo");
+    }
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) { //seul Bundle est important

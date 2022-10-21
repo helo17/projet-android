@@ -11,7 +11,7 @@
     <string name="rep4_q2">L\'odeur d\'une bibliothèque</string>
     <string name="btn_back">Retour</string>
     <string name="btn_next">Suivant</string>
-    <string name="question1">"2. Choisis la potion que tu aimerais le plus inventer : "</string>
+    <string name="question1">2. Choisis la potion que tu aimerais le plus inventer : </string>
     <string name="question2">1. La plante à Pipaillon produit tous les 100 ans des fleurs qui changent d\'odeur dans le but d\'attirer une personne précise. Quel parfum cette plante devrait-elle dégager pour t\'attirer ?</string>
     <string name="text_intro">A quelle maison appartiens-tu ?</string>
     <string name="btn_accueil">Demarrer</string>
@@ -22,14 +22,14 @@
     <string name="q3">3. 4 boîtes sont disposées devant toi. Tu as le droit d\'en ouvrir seulement une. Laquelle tu choisis ?</string>
     <string name="Text_congra">Félicitation</string>
     <string name="text_fin">Vous appartenez à la maison :</string>
-    <string name="Q_4">"4. Tu te trouves dans un jardin enchanté. Qu'est-ce qui attire ton attention ? "</string>
+    <string name="Q_4">4. Tu te trouves dans un jardin enchanté. Qu\'est-ce qui attire ton attention ?</string>
     <string name="q_a_r_1">La statue d’un sorcier de grande renommée</string>
     <string name="q_4_r_2">Un animal magique qui passe par là</string>
     <string name="q_4_r_3">Un balai de quidditch</string>
     <string name="q_4_r_4">Une plante rare</string>
-    <string name="q_5">"5. Poudlard est en train de brûler, et il y a 4 choses importantes que vous devez sauver. Lequel vas-tu sauver en premier ? "</string>
+    <string name="q_5">5. Poudlard est en train de brûler, et il y a 4 choses importantes que vous devez sauver. Lequel vas-tu sauver en premier ?</string>
     <string name="Q7">7. Sur une échelle de 1 à 4 a quel point jugez vous important de faire partie de l’équipe de quidditch ?</string>
-    <string name="Q6">"6. Qu'est-ce qui t'intéresserait le plus d'apprendre à Poudlard ? "</string>
+    <string name="Q6">6. Qu\'est-ce qui t\'intéresserait le plus d\'apprendre à Poudlard ?</string>
     <string name="Q6_R1">Les sortilèges et maléfices</string>
     <string name="Q6_r2">Apprivoiser les créatures magiques</string>
     <string name="Q6_r3">Les secrets du château</string>

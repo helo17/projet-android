@@ -151,6 +151,13 @@ public class P_fin extends AppCompatActivity {
         super.onRestart(); // ALWAYS call first the parent’s method!
         Log.d(MainActivity.TAG, "onRestart page fin");
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume(); // ALWAYS call first the parent’s method!
+        Log.d(MainActivity.TAG, "onResume");
+    }
+
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) { //seul Bundle est important
         super.onSaveInstanceState(outState, outPersistentState);

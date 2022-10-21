@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    tools:context=".page_q4">
+
+    <TextView
+        android:id="@+id/text_quizzditch_p4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/App_name"
+        android:textColor="#FEFEFE"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/text_q6"
+        android:layout_width="347dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/Q6"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="247dp"
+        android:layout_height="205dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Switch
+            android:id="@+id/switch_r_1_q_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aref_ruqaa"
+            android:minHeight="48dp"
+            android:text="@string/Q6_R1"
+            android:textColor="#FEFEFE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:trackTint="#FEFEFE" />
+
+        <Switch
+            android:id="@+id/switch_r_2_q_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aref_ruqaa"
+            android:minHeight="48dp"
+            android:text="@string/Q6_r2"
+            android:textColor="#FEFEFE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:trackTint="#FEFEFE" />
+
+        <Switch
+            android:id="@+id/switch_r_3_q_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aref_ruqaa"
+            android:minHeight="48dp"
+            android:text="@string/Q6_r3"
+            android:textColor="#FEFEFE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:trackTint="#FEFEFE" />
+
+        <Switch
+            android:id="@+id/switch_r_4_q_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aref_ruqaa"
+            android:minHeight="48dp"
+            android:text="@string/Q6_r4"
+            android:textColor="#FEFEFE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:trackTint="#FEFEFE"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:background="#00170F0F"
+        android:max="4"
+        android:numStars="4"
+        android:progress="0"
+        android:progressBackgroundTint="#FEFEFE"
+        android:progressTint="#7A0479"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back_p4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="336dp"
+        android:layout_height="104dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/Q7"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintStart_toEndOf="@+id/text_q6" />
+
+    <Button
+        android:id="@+id/btn_back_p4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/btn_back"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2" />
+
+    <Button
+        android:id="@+id/btn_next_p4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:text="@string/btn_next"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_back_p4"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="1dp"
+        android:layout_height="409dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ratingBar"
+        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
